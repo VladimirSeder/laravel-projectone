@@ -1,0 +1,62 @@
+Novi projekat
+laravel new nazivProjekta
+
+Pokretanje projekta
+php artisan serve
+
+Kreiranje kontrolera
+php artisan make:controller NazivController
+
+Konekcija sa bazom
+.env fajl
+
+Migracije
+php artisan migrate
+
+Ako dodje do greske prilikom prve migracije dodati
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+u AppServiceProvider.php
+
+Vracanje migracije
+php artisan migrate:rollback
+
+Kreiranje migracije
+php artisan make:migration naziv_migracije
+
+Pomoc artisan help
+php artisan help make:migration
+
+Kreiranje modela
+php artisan make:model Naziv
+
+Kreiranje kontrolera za resurse
+php artisan make:controller NazivController -r
+
+Kreiranje kontrolera za resurse i sa modelom
+php artisan make:controller NazivController -r -m NazivModela
+
+Kreiranje modela sa migraciom i factory
+$ php artisan make:model Task -m -f
+
+//fajlovi
+Views
+resources/views/
+
+Routes
+routes/
+
+Migrations
+database/migrations/
+
+Controllers
+app/http/controllers/
+
+Models
+app/
+
+//fajlovi
